@@ -21,6 +21,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY . .
 
+RUN chmod -R 777 storage
 
 # installing composer package
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
