@@ -22,4 +22,4 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: deploy latest image
-      run: docker service update --image localhost:8050/tugas-webgis:latest tugas-webgis
+      run: docker service update --image localhost:8050/tugas-webgis:latest webgis_webgis
