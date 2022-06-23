@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-23T09:36:03.726Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36" etag="CUL0GbTvVc3YZAbdePAM" version="20.0.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-06-23T12:42:18.784Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36" etag="nr1F-gYRfGW-GTqFrqZV" version="20.0.1" type="github" pages="3">
   <diagram id="twkX-wiHloh2bhLJ1bMH" name="mainpage">
-    <mxGraphModel dx="2815" dy="1205" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1677" dy="507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -310,7 +310,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="p1MttlRUuHE70OIqx3gC" name="admin">
-    <mxGraphModel dx="542" dy="332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="749" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -356,11 +356,8 @@
         <mxCell id="5hMiIYTr5jCHaU75eb_N-20" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Profile Makam&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
           <mxGeometry x="130" y="780" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="5hMiIYTr5jCHaU75eb_N-21" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Statistik&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="130" y="820" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="5hMiIYTr5jCHaU75eb_N-22" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;akun&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="130" y="860" width="100" height="30" as="geometry" />
+        <mxCell id="5hMiIYTr5jCHaU75eb_N-22" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;logout&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="130" y="826" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5hMiIYTr5jCHaU75eb_N-23" value="Table" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="260" y="770" width="320" height="240" as="geometry" />
@@ -431,7 +428,7 @@
         <mxCell id="5hMiIYTr5jCHaU75eb_N-39" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Profile Makam&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="130" y="1150" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="5hMiIYTr5jCHaU75eb_N-41" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;akun&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
+        <mxCell id="5hMiIYTr5jCHaU75eb_N-41" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;logout&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
           <mxGeometry x="130" y="1190" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="5hMiIYTr5jCHaU75eb_N-55" value="nama makam" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
@@ -449,35 +446,11 @@
         <mxCell id="x3U7g23U1YLiSvLmI5-u-1" value="set jenis makam" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="260" y="1330" width="320" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="120" y="1480" width="480" height="330" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="120" y="1480" width="120" height="330" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-4" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Daftar harga&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1500" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-5" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Profile Makam&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1540" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-6" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;akun&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="130" y="1580" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-7" value="username" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="260" y="1500" width="320" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-8" value="password" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="260" y="1550" width="320" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="x3U7g23U1YLiSvLmI5-u-12" value="hapus akun" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="260" y="1610" width="320" height="40" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="Gp1F8mzBWhQl-gu6xeF_" name="erd">
-    <mxGraphModel dx="1310" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2246" dy="1377" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
