@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-06-23T12:42:18.784Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36" etag="nr1F-gYRfGW-GTqFrqZV" version="20.0.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-06-23T12:53:39.709Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36" etag="EAriJYLGgif73gKCaW6K" version="20.0.1" type="github" pages="3">
   <diagram id="twkX-wiHloh2bhLJ1bMH" name="mainpage">
-    <mxGraphModel dx="1677" dy="507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1898" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -141,9 +141,6 @@
         </mxCell>
         <mxCell id="OnwGt_X_7mAQr5yjR0-S-60" value="TPU japulaga banjarsai" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
           <mxGeometry x="430" y="1018" width="110" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="OnwGt_X_7mAQr5yjR0-S-61" value="route lokasi" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="650" y="1023" width="50" height="17" as="geometry" />
         </mxCell>
         <mxCell id="OnwGt_X_7mAQr5yjR0-S-62" value="route gmaps" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
           <mxGeometry x="710" y="1023.5" width="50" height="17" as="geometry" />
@@ -304,13 +301,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="UNWvQgdkGsFtx2c87XKI-1" value="lapor" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=7;" vertex="1" parent="1">
-          <mxGeometry x="590" y="1023.5" width="50" height="17" as="geometry" />
+          <mxGeometry x="650" y="1023.5" width="50" height="17" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="p1MttlRUuHE70OIqx3gC" name="admin">
-    <mxGraphModel dx="749" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="605" dy="371" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -445,6 +442,12 @@
         </mxCell>
         <mxCell id="x3U7g23U1YLiSvLmI5-u-1" value="set jenis makam" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="260" y="1330" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AjTRB2gIw7POv_RlDGaC-1" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.misc.map;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1670" width="250" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="AjTRB2gIw7POv_RlDGaC-2" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-08-128.png;fontFamily=Verdana;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="1740" width="38" height="38" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
