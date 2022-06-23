@@ -1,0 +1,25 @@
+name: deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build -t localhost:8050/tugas-webgis:latest .
+    - name: push image to registry
+      run: docker image push localhost:8050/tugas-webgis:latest
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+    - name: deploy latest image
+      run: docker service update --image localhost:8050/tugas-webgis:latest tugas-webgis
