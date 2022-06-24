@@ -31,22 +31,18 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header" class="header-top">
     <div class="container">
 
-      <h1><a href="index.html">Emily Jones</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h1><a href="{{url("/")}}">informasimakam.xyz</a></h1>
       <h2>I'm a passionate <span>graphic designer</span> from New York</h2>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#services">Services</a></li>
-          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="nav-link active" href="{{url("/")}}">Home</a></li>
+          <li><a class="nav-link" href="{{url("/about")}}">About us</a></li>
+          <li><a class="nav-link" href="{{url("/tutorial")}}">How to use</a></li>
+          <li><button class="btn btn-success"><a href="{{url("/login")}}">Login</a></button></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
