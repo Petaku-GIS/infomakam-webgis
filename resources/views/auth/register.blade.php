@@ -24,9 +24,20 @@
 	<link rel="stylesheet" type="text/css" href="{{asset("assets/css/util.css")}}">
 	<link rel="stylesheet" type="text/css" href="{{asset("assets/css/main.css")}}">
 <!--===============================================================================================-->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 
+	@if (session('error'))
+		<script>
+			Swal.fire(
+				'Failed!',
+				'{{ session("error") }}',
+				'error'
+			)
+		</script>
+	@endif
 
 	<div class="container-contact100">
 		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>

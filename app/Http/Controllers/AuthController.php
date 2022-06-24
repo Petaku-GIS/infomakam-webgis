@@ -28,7 +28,7 @@ class AuthController extends Controller
             ]);
             return redirect('/');
         }
-        return redirect('/register');
+        return redirect('/register')->with('error', 'Register failed');
     }
 
     public function Login(Request $request)
@@ -42,7 +42,7 @@ class AuthController extends Controller
             ]);
             return redirect('/');
         }
-        return redirect('/login');
+        return redirect('/login')->with('error', 'Email or password is incorrect');
     }
 
     public function Logout()
