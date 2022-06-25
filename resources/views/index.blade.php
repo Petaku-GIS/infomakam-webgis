@@ -42,7 +42,11 @@
           <li><a class="nav-link active" href="{{url("/")}}">Home</a></li>
           <li><a class="nav-link" href="{{url("/about")}}">About us</a></li>
           <li><a class="nav-link" href="{{url("/tutorial")}}">How to use</a></li>
-          <li><button class="btn btn-success"><a href="{{url("/login")}}">Login</a></button></li>
+          @if (session('id'))
+            <li><button class="btn btn-success"><a href="{{url("/logout")}}">Logout</a></button></li>
+          @else
+            <li><button class="btn btn-success"><a href="{{url("/login")}}">Login</a></button></li>
+          @endif
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
