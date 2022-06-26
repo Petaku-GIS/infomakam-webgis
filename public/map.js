@@ -43,7 +43,100 @@ const onEachMakamIcon = (feature, latlng) => {
     });
 };
 
+const highlightFeature = (e) => {
+    console.log(e);
+    e.sourceTarget.setStyle({
+        fillColor: "#fffff",
+        weight: 3,
+        opacity: 1,
+        color: "white",
+        dashArray: "6",
+        fillOpacity: 0.1,
+    });
+}
+
+const resetHighlight = (e) => {
+        e.sourceTarget.setStyle({
+          fillColor: "#fffff",
+          weight: 3,
+          opacity: 1,
+          color: "white",
+          dashArray: "6",
+          fillOpacity: 0.3,
+        });
+        mainMap.closePopup();
+}
+
+const onEachBatasDaerah = (feature, layer) => {
+    console.log(feature, layer);
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+    });
+};
+
+const showMakamInfo = (id, nama) => {
+
+    $.ajax({
+        url: `/api/makam/${id}`,
+        method: "GET",
+        success: function (response) {
+            resultBoard.html("");
+            console.log(response);
+
+            $('#makam-info-pengelola').text(response.pengelola);
+
+            $('#makam-info-alamat').text(`${response.alamat}, ${response.kecamatan}, ${response.kabupaten}, ${response.provinsi}`);
+            $('#makam-info-deskripsi').text(response.description);
+            $('#panel-info-nama-makam').text(nama);
+            $('#reservasi-link').attr('href', `https://api.whatsapp.com/send?phone=${response.whatsapp_contact}&text=Saya%20mau%20reservasi%20makam%20${response.nama_makam}`);
+            $('#panel-info').fadeIn();
+        },
+    });
+
+     $.ajax({
+        url: `/api/makam/${id}/harga`,
+        method: "GET",
+        success: function (response) {
+            resultBoard.html("");
+            console.log(response);
+            $('#tabel-harga').html('');
+            response.map((v) => {
+                $('#tabel-harga').append(`<tr class="bg-white border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${v.name}</td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                ${v.description}
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                ${v.ketersediaan}
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                Rp. ${formatRupiah(JSON.stringify(v.harga))}
+                              </td>
+                            </tr>`);
+            });
+
+        },
+    });
+
+}
+
+const showPopUpInfoToko = (event) => {
+    const makam = event.sourceTarget.feature.properties;
+    L.popup()
+        .setLatLng(event.latlng)
+        .setContent(`${makam.nama}<br><button onclick="showMakamInfo(${makam.id}, '${makam.nama}');" class="bg-slate-900 hover:bg-slate-800 rounded-md w-full mt-2 py-2 px-2 text-white">Detail</button>`)
+        .openOn(mainMap);
+};
+
+const onFeatureHover = (feature, layer) => {
+    layer.on({
+        mouseover: showPopUpInfoToko,
+    });
+};
+
 let makamLayer = new L.GeoJSON.AJAX("api/geojson/makam", {
+    onEachFeature: onFeatureHover,
     pointToLayer: onEachMakamIcon,
 }).addTo(mainMap);
 
@@ -100,13 +193,14 @@ const gotoLocationDaerah = (idx) => {
     mainMap.removeLayer(searchPolygon);
     console.log(searchHistory[idx].geom);
     searchPolygon = L.geoJSON(JSON.parse(searchHistory[idx].geom), {
+        onEachFeature: onEachBatasDaerah,
         style: {
           fillColor: "#fffff",
           weight: 3,
           opacity: 1,
           color: "white",
           dashArray: "6",
-          fillOpacity: 0.1,
+          fillOpacity: 0.3,
         },
     })
     searchPolygon.addTo(mainMap);
@@ -240,4 +334,5 @@ $(document).ready(() => {
             searchMakam(searchInput.val());
         }
     });
+
 });

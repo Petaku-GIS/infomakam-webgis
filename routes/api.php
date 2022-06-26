@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/search', [Makam::class, 'searchMakam']);
 Route::get('/geojson/makam', [Makam::class, 'geojsonMakam']);
-
+Route::get('/makam/{id}', [Makam::class, 'getDetailMakam']);
+Route::get('/makam/{id}/harga', [Makam::class, 'getMakamPrice']);

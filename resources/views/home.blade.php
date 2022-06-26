@@ -27,7 +27,7 @@
     <div class="fixed top-0 z-[10000] px-6 bg-slate-900 text-white w-11/12 mt-4 ml-20 rounded-xl drop-shadow-2xl">
         <div class="flex">
             <div class="flex-none py-4">
-                <h1 class="inline-block align-middle text-gray-200">Cemetry Info</h1>
+                <h1 class="inline-block align-middle text-gray-200">Info Makam</h1>
             </div>
             <div class="flex-auto mx-8 py-2.5">
                 <div class="inline-flex flex-col relative text-gray-200 w-full">
@@ -48,13 +48,63 @@
         </div>
     </div>
 
-    <div id="panel-info" class="hidden fixed z-[10000] px-6 bg-slate-900 text-white w-11/12 h-4/5  mt-24 ml-20 rounded-xl drop-shadow-2xl py-4">
+    <div id="panel-info" class="hidden fixed z-[10000] px-6 bg-slate-900 text-white w-11/12 h-4/5 overflow-y-scroll  mt-24 ml-20 rounded-xl drop-shadow-2xl py-4">
         <div class="flex">
             <div class="flex-grow">
-                <h2 class="inline-block align-middle">Tempat Wawawa</h2>
+                <h2 class="inline-block align-middle ml-4" id="panel-info-nama-makam"> Nama Makam </h2>
             </div>
             <div class="flex-none">
                 <button onclick="closePanelInfo();" class="rounded-xl bg-slate-800 text-white px-4 py-2 hover:bg-slate-700">X</button>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="flex-none w-4/12 flex-wrap">
+                <div class="h-44 bg-gray-500 rounded-md m-4"></div>
+                <table class="m-4 text-sm font-light">
+                    <tr class="mt-2">
+                        <td>Pengelola</td>
+                        <td class="w-4"></td>
+                        <td id="makam-info-pengelola">: -</td>
+                    </tr>
+                    <tr class="mt-2">
+                        <td class="align-top">Alamat</td>
+                        <td class="w-4"></td>
+                        <td id="makam-info-alamat">: -</td>
+                    </tr>
+                </table>
+                <p id="makam-info-deskripsi" class="break-words ml-4 font-light text-sm mb-4">-</p>
+                <div class="ml-4 mt-2 flex">
+                    <a id="reservasi-link" target="_blank" class="text-center bg-slate-800 text-white text-sm font-light rounded-md py-2 px-4 flex-auto mr-2 hover:bg-slate-700" >Reservasi</a>
+                </div>
+            </div>
+            <div class="flex-auto">
+                <div class="flex flex-col">
+                  <div>
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                      <div class="overflow-hidden">
+                        <table class="min-w-full m-4">
+                          <thead class="border-b rounded-md">
+                            <tr>
+                              <th scope="col" class="text-sm font-medium text-gray-900 bg-white px-6 py-4 text-left">
+                                Nama
+                              </th>
+                              <th scope="col" class="text-sm font-medium text-gray-900 bg-white  px-6 py-4 text-left">
+                                Deskripsi
+                              </th>
+                              <th scope="col" class="text-sm font-medium text-gray-900 bg-white  px-6 py-4 text-left">
+                                Ketersediaan
+                              </th>
+                              <th scope="col" class="text-sm font-medium text-gray-900 bg-white  px-6 py-4 text-left">
+                                Harga
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody id="tabel-harga"></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>

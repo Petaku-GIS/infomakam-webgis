@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/pick', function() {
+    return view('pick');
+});
 // auth
 Route::get('/login', [AuthController::class, 'LoginView']);
 Route::post('/login', [AuthController::class, 'Login']);

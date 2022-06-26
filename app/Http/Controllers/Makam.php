@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DaftarHarga;
 use App\Models\Kecamatan;
 use App\Models\Makam as ModelsMakam;
 use Illuminate\Http\JsonResponse;
@@ -11,6 +12,34 @@ use stdClass;
 
 class Makam extends Controller
 {
+
+    public function getMakamPrice($id): JsonResponse
+    {
+        $result = DaftarHarga::select('*')->where('makam_id', $id)->get();
+        return response()->json($result, 200);
+    }
+
+    public function getDetailMakam($id): JsonResponse
+    {
+        $result = ModelsMakam::select(
+                'makam.id',
+                'makam.nama_makam',
+                'makam.alamat',
+                'makam.description',
+                'makam.whatsapp_contact',
+                'kecamatan.kecamatan',
+                'users.name AS pengelola',
+                'kecamatan.kpu_kab AS kabupaten',
+                'kecamatan.kpu_prov AS provinsi',
+                DB::raw('(SELECT MIN(harga) minHarga FROM daftar_harga WHERE makam_id = makam.id) minHarga'),
+                DB::raw('ST_Y(makam.Location) as lat, ST_X(makam.Location) as lng'),
+            )
+            ->join('kecamatan', 'kecamatan.kpu_idkec', '=', 'makam.id_kec')
+            ->join('users', 'users.id', '=', 'makam.user_id_pengelola')
+            ->where('makam.id', $id)
+            ->first();
+        return response()->json($result, 200);
+    }
 
     public function geojsonMakam(): JsonResponse
     {
