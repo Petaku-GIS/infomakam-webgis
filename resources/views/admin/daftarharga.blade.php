@@ -74,7 +74,7 @@
                                                 <a data-toggle="modal" data-target="#deleteModal{{$daftarHarga->id}}" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
-                                        <!-- Logout Modal-->
+                                        <!-- Delete Modal-->
                                         <div class="modal fade" id="deleteModal{{$daftarHarga->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">

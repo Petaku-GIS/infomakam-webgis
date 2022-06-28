@@ -11,14 +11,14 @@ class Makam extends Model
     protected $table = 'makam';
     protected $primaryKey = 'id';
     public $incrementing = true;
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'user_id_pengelola',
         'nama_makam',
+        'alamat',
         'id_kec',
         'whatsapp_contact',
-        'phone_contact',
         'description',
         'photos',
         'type',

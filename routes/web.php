@@ -36,3 +36,11 @@ Route::post('/admin/daftar-harga/tambah', [AdminController::class, 'TambahDaftar
 Route::get('/admin/daftar-harga/edit/{id}', [AdminController::class, 'ViewUbahDaftarHarga']);
 Route::put('/admin/daftar-harga/edit', [AdminController::class, 'UbahDaftarHarga']);
 Route::delete('/admin/daftar-harga/delete/{id}', [AdminController::class, 'HapusDaftarHarga']);
+
+
+Route::get('/admin/profil-makam', [AdminController::class, 'ViewProfilMakam']);
+Route::get('/admin/profil-makam/tambah', [AdminController::class, 'ViewTambahProfilMakam']);
+Route::post('/admin/profil-makam/tambah', [AdminController::class, 'TambahProfilMakam']);
+Route::get('/admin/profil-makam/edit/{id}', [AdminController::class, 'ViewUbahProfilMakam']);
+Route::put('/admin/profil-makam/edit', [AdminController::class, 'UbahProfilMakam']);
+Route::delete('/admin/profil-makam/delete/{id}', [AdminController::class, 'HapusProfilMakam']);
