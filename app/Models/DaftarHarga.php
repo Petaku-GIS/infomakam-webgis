@@ -11,7 +11,7 @@ class DaftarHarga extends Model
     protected $table = 'daftar_harga';
     protected $primaryKey = 'id';
     public $incrementing = true;
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'name',

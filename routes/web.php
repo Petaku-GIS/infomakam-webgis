@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,11 @@ Route::post('/login', [AuthController::class, 'Login']);
 Route::get('/register', [AuthController::class, 'RegisterView']);
 Route::post('/register', [AuthController::class, 'Register']);
 Route::get('/logout', [AuthController::class, 'Logout']);
+
+// admin dashboard
+Route::get('/admin/daftar-harga', [AdminController::class, 'ViewDashboard']);
+Route::get('/admin/daftar-harga/tambah', [AdminController::class, 'ViewTambahDaftarHarga']);
+Route::post('/admin/daftar-harga/tambah', [AdminController::class, 'TambahDaftarHarga']);
+Route::get('/admin/daftar-harga/edit/{id}', [AdminController::class, 'ViewUbahDaftarHarga']);
+Route::put('/admin/daftar-harga/edit', [AdminController::class, 'UbahDaftarHarga']);
+Route::delete('/admin/daftar-harga/delete/{id}', [AdminController::class, 'HapusDaftarHarga']);

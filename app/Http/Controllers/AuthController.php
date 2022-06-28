@@ -26,7 +26,7 @@ class AuthController extends Controller
                 'id' => $user->id,
                 'name' => $user->name,
             ]);
-            return redirect('/');
+            return redirect('/admin/daftar-harga');
         }
         return redirect('/register')->with('error', 'Register failed');
     }
@@ -40,7 +40,7 @@ class AuthController extends Controller
                 'id' => $login->id,
                 'name' => $login->name,
             ]);
-            return redirect('/');
+            return redirect('/admin/daftar-harga');
         }
         return redirect('/login')->with('error', 'Email or password is incorrect');
     }
