@@ -15,7 +15,6 @@ const formatRupiah = (number) => {
 };
 
 let mainMap = L.map("map").setView([-3.63392522809151, 120.032981872559], 5);
-
 // detect location
 mainMap.on("locationfound", (e) => {
     console.log("location accuracy", e.accuracy);
@@ -134,11 +133,19 @@ const onFeatureHover = (feature, layer) => {
         mouseover: showPopUpInfoToko,
     });
 };
+mainMap._layersMaxZoom = 19;
 
 let makamLayer = new L.GeoJSON.AJAX("api/geojson/makam", {
     onEachFeature: onFeatureHover,
     pointToLayer: onEachMakamIcon,
-}).addTo(mainMap);
+});
+
+var markers = L.markerClusterGroup();
+markers.addTo(mainMap);
+makamLayer.on('data:loaded', function () {
+    markers.addLayer(makamLayer);
+    mainMap.addLayer(markers);
+});
 
 let baseMaps = {
     googleStreets: L.tileLayer(
@@ -164,7 +171,7 @@ let baseMaps = {
     ),
 };
 let overlayMaps = {
-    makam: makamLayer
+    makam: markers
 };
 
 baseMaps.googleHybrid.addTo(mainMap);

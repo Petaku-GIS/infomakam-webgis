@@ -6,9 +6,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <script src="leaflet/leaflet-src.js"></script>
-    <script type="text/javascript" src="{{asset("leaflet/leaflet.ajax.js")}}"></script>
+    <script type="text/javascript" src="leaflet/leaflet.ajax.js"></script>
     <link rel="stylesheet" href="leaflet/Control.MiniMap.min.css" />
     <script src="leaflet/Control.MiniMap.min.js"></script>
+
+	<link rel="stylesheet" href="leaflet/MarkerCluster.css" />
+	<link rel="stylesheet" href="leaflet/MarkerCluster.Default.css" />
+	<script src="leaflet/leaflet.markercluster-src.js"></script>
+
     <style>
       html {
         height: 100%;
