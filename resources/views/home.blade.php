@@ -46,8 +46,7 @@
                 </div>
             </div>
             <div class="flex-none py-4">
-                <button class="hover:bg-gray-700 rounded-full text-sm font-light px-4 py-1.5 text-gray-200 hover:text-gray-200">About Us</button>
-                <button class="hover:bg-gray-700 rounded-full text-sm font-light px-6 py-1.5 text-gray-200 hover:text-gray-200 mr-2">Docs</button>
+                <button class="hover:bg-gray-700 rounded-full text-sm font-light px-4 py-1.5 text-gray-200 hover:text-gray-200"><a href="{{url('/about-us')}}">About Us</a></button>
                 @if (session('id'))
                   <button class="bg-gray-700 rounded-full text-sm font-light px-6 py-1.5 text-gray-200 mr-4 hover:bg-slate-600"><a href="{{url('/logout')}}">Logout</a></button>
                 @else
